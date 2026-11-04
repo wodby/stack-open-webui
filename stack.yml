@@ -1,0 +1,21 @@
+name: open-webui
+title: Open WebUI
+icon: open-webui
+
+services:
+- name: open-webui
+  title: Open WebUI
+  service: open-webui
+  required: true
+  main: true
+  links:
+  - name: postgres
+    service: postgres
+
+- name: postgres
+  title: PostgreSQL
+  service: postgres
+  required: true
+  volumes:
+  - name: data
+    size: 10
