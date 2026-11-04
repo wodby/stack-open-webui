@@ -1,6 +1,6 @@
 name: open-webui
 title: Open WebUI
-icon: open-webui
+icon: openwebui
 
 services:
 - name: open-webui
