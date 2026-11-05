@@ -1,6 +1,7 @@
 name: open-webui
 title: Open WebUI
 icon: openwebui
+docs: https://wodby.com/docs/2.0/stacks/catalog/open-webui/
 
 services:
 - name: open-webui
