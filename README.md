@@ -6,6 +6,8 @@ with Wodby.
 This repository defines the Wodby stack manifest and its default service
 composition.
 
+<!-- wodby:generated:start -->
+
 - [Browse Wodby application stacks](https://wodby.com/stacks)
 - [Open WebUI stack guide](https://wodby.com/docs/2.0/stacks/catalog/open-webui/)
 - [Wodby stack documentation](https://wodby.com/docs/2.0/stacks/)
@@ -23,9 +25,11 @@ composition.
 | Open WebUI<br>`open-webui` | required; main service; links: `postgres` → `postgres`; 10 GB data volume |
 | PostgreSQL<br>`postgres` | required; 10 GB data volume |
 
-Open WebUI does not run models itself. It connects to model APIs.
+<!-- wodby:generated:end -->
 
 ## Deploy this stack
+
+Open WebUI does not run models itself. It connects to model APIs.
 
 1. Set the **Admin email** and **Admin password** settings of the Open WebUI
    service. The administrator account is created on the first start, and
@@ -59,12 +63,3 @@ search index are on the Open WebUI volume. Back up both together.
 
 When replacing or renaming a stack service, update every related link target.
 Stack-local names and referenced service names are distinct identifiers.
-
-Validate the manifest with:
-
-```bash
-wodby stack validate-manifest stack.yml --org <org-id>
-```
-
-See the [stack manifest reference](https://wodby.com/docs/2.0/stacks/template/)
-and the [managed services index](https://github.com/wodby/services).
