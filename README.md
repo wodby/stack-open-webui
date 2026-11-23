@@ -8,6 +8,9 @@ composition.
 
 <!-- wodby:generated:start -->
 
+## Stack contract
+
+- [Open WebUI stack on Wodby](https://wodby.com/stacks/open-webui)
 - [Browse Wodby application stacks](https://wodby.com/stacks)
 - [Open WebUI stack guide](https://wodby.com/docs/2.0/stacks/catalog/open-webui/)
 - [Wodby stack documentation](https://wodby.com/docs/2.0/stacks/)
@@ -22,8 +25,18 @@ composition.
 
 | Component / service | Default configuration |
 | --- | --- |
-| Open WebUI<br>`open-webui` | required; main service; links: `postgres` → `postgres`; 10 GB data volume |
-| PostgreSQL<br>`postgres` | required; 10 GB data volume |
+| Open WebUI<br>`open-webui` | required; enabled by default; links: `postgres` → `postgres` |
+| PostgreSQL<br>`postgres` | required; enabled by default; volumes: `data` 10 GB |
+
+Enabled optional services are selected by default but can be excluded when an
+app is created. Disabled optional services are available but not selected by
+default. Required services cannot be excluded.
+
+## Validate the stack manifest
+
+```bash
+wodby stack validate-manifest stack.yml --org <org-id>
+```
 
 <!-- wodby:generated:end -->
 
